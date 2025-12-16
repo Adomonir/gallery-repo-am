@@ -53,7 +53,17 @@ export default function RootLayout({
           </header>
           {children}
         </ThemeProvider>
-        {/* REPLACE THIS COMMENT */}
+              {/* Create a footer for this section. It should contain the logo and copyright information. */}
+              <footer className="border-t bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm mt-16">
+                  <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+                      <div className="flex items-center gap-2 mb-4 md:mb-0">
+                          <Camera className="h-6 w-6 text-blue-600" />
+                          <span className="text-sm text-slate-700 dark:text-slate-300">
+                              &copy; {new Date().getFullYear()} Portfolio Gallery. All rights reserved.
+                          </span>
+                      </div>
+                  </div>
+              </footer>
       </body>
     </html>
   );
